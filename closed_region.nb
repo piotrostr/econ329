@@ -1,0 +1,11 @@
+In[57]:=
+(*
+1. Find the global maximum and minimum value of f(x,y) = x^2 +6xy on the closed
+region bounded by the line x+y=4 and the curve xy=3 with x >=0, y>=0.
+*)
+
+In[81]:=
+NMaximize[{x^2 + 6*x*y, x + y == 4, x*y == 3, x >= 0, y >= 0}, {x, y}, Method -> Automatic]
+Out[81]= {27.,{x->3.,y->1.}}
+In[83]:= Minimize[{x^2+6*x*y,x+y==4,x*y==3, x >= 0, y >= 0},{x,y}]
+Out[83]= {19,{x->1,y->3}}
