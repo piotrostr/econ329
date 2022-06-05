@@ -1,0 +1,18 @@
+(*
+        Differential equations system of (y_1, y_2, y_3)
+        y_1^' = 2y_1
+        y_2^' = 2y_2 + y_3
+        y_3^' = y_2 - 2y_3
+*)
+
+A = {{2, 0, 0}, {0, 2, 1}, {0, 1, -2}}
+Eigenvalues[A]
+
+(* make a handy function to get the LHS of equations system *)
+X[t_] = {y1[t], y2[t], y3[t]}
+
+system = X'[t] == A.X[t]
+system
+
+solution = DSolve[system, {y1, y2, y3}, t]
+solution
