@@ -1,0 +1,11 @@
+Clear[f, g]
+
+f[x_, y_] := 6 x + 8 y
+g[x_, y_] := x^2 + y^2 - 25
+
+Solve[
+ D[f[x, y] - lambda g[x, y], {{x, y, lambda}}] == 0,
+ {x, y}, lambda
+]
+
+f[3, 5]
