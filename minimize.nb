@@ -1,9 +1,9 @@
 (* Q4 2021 Exam
-        
-minimize 
-2x_1 +4x_2 +x_3 +x_4 +2x_5 
 
-s.t. 
+minimize
+2x_1 +4x_2 +x_3 +x_4 +2x_5
+
+s.t.
 x_1 + 3x_2 + x_4 + x_5 = 4
 2x_1 + x_2 + x_6 = 3
 x_2 + 4x_3 + x_4 + x_7 = 2
@@ -11,3 +11,11 @@ x_2 + 4x_3 + x_4 + x_7 = 2
 x_i >= 0 and i = 1, 2, 3, 4, 5, 6, 7
 
 *)
+
+(* do this with matrix of coefficients *)
+f = 2*x1 +4*x2 + x3 + x4 + 2*x5
+cons1 = x1 + 3*x2 + x4 + x5 == 4
+cons2 = 2*x1 + x2 + x6 == 3
+cons3 = x2 + 4*x3 + x4 + x7 == 2
+
+NMinimize[{f, cons1, cons2, cons3}, {x1, x2, x3, x4, x5, x6, x7}]
