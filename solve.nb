@@ -1,0 +1,2 @@
+
+LinearProgramming[x - (t/(t^2 - 1))*x == t, {x}]

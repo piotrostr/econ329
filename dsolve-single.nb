@@ -1,0 +1,3 @@
+
+system = x'[t] == beta*(x[t] - epsilon)*(x[t] - theta)
+DSolve[system, {x}, t]
